@@ -60,3 +60,37 @@ _**Divide and conquer algorithms:**_
 - Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
 - Combine the solution to the subproblems into a solution to the original problem
 ```
+\
+&nbsp;
+_**Dynamic programming algoritms:**_
+```
+- They work based on memoization
+- To find the best solution
+```
+\
+&nbsp;
+_**Greedy algorithms:**_
+```
+- We take the best we can without about future consequence.
+- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
+```
+\
+&nbsp;
+_**Brute force algorithms:**_
+```
+- It simply all possible until a satisfactory solution is found
+```
+\
+&nbsp;
+_**Randomized algorithms:**_
+```
+- Use a random number at least once during the computation to make a decision
+```
+
+### Lecture Notes
+
+[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
+\
+&nbsp;
+### Acknowledgements
+- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
