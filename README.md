@@ -1,96 +1,72 @@
 <!-- Heading -->
-# The Complete Data Structures and Algorithms Course in Python
-
-## What is a Data Structure?
-- Data Structures are different ways of organizing data on your conputer, that can be used effectively
-## What is an Algorithm?
-- Algorithms in Computer Science: Set of rules for a computer prograrm to accomplish a Task
-
-``` mermaid
-flowchart TD
-    A[Input Data]-->B[Calculation];
-
-    B[Calculation]-->C[Stop When answer found]
+## What is Recursion?
+- Recursion = a way of solving a problem by having a function calling itself
+- Performing the same operation multiple times with the different inputs
+- In every step we try smaller inputs to make the problem smaller
+- Base condition is needed to stop the recursion, otherwise infinite loop will occur.
+``` python
+def openRussianDoll(doll):
+    if doll == 1:
+        print("All doll is opened")
+    else:
+        openRussianDoll(doll - 1)
+```
+# Why Recursion?
+1. Recursive thinking is really important in programming and it helps you break down big problem into smaller ones and easier to use
+- when to choose recursion?
+    - If you can drive the problem into similar sub problem
+    - Design an algorithm to computer nth...
+    - write code to list the n...
+    - Implement a method to compute all.
+    - Practice
+2. The prominent usage of recursion in data structures like trees and graph
+3. Interviews
+4. It is used in many algorithms (divide and conquer, greedy and dynamic programming)
+## How Recursion works?
+1. A method calls it self
+2. Exit from infinite loop
+``` python
+def recursionMethod(parameters): 
+    if exit from condition satisfied: # Condition to exit the recursion
+        return some value
+    else:
+        recursiveMethod(modified parameters) # it call itself
+```
+## Recursive vs Iterative Solution
+### Recursive
+```python
+def powerOfTwo(n):
+    if n ==  0:
+        return
+    else:
+        power = powerOfTwo(n - 1)
+        return power + 2
 ```
 
-### What makes a good algrithms?
-- Correctness
-- Efficiency 
+### Iterative
+```python
+def powerOfTwo(n):
+    i = 0 
+    power = 1
+    while 1 < n:
+        power = power + 2
+        i = i + 1
+    return power
+```
+| Points | Recursive | Iteration | |
+| ------ | --------- | ----------|---|
+| Space efficient?| No | Yes | No stack memory require in case of iteration |
+| Time efficient? | No | Yes | In case of recursion system needs more time for pop and push elements to stack memory which makes recursion less time efficient |
+| Easy to code? | Yes | No | We use recursive especially in the cases we know that a problem can be divide into similar sub problem|
 
-### Type of Data Strucures
-
-``` mermaid
-graph TD
-A[Data Structure] --> B[Primitive]
-A[Data Structure] --> C[Non Primitive]
-
-B --> D[Integer \n Float \n Character \n String \n Boolean ];
-C --> E[Linear];
-C --> F[Non Linear];
-E --> G[Static];
-G --> H[Array];
-E --> J[Dynamic];
-J --> K[Linked List \n Stack \n Queue];
-F --> L[Tree \n Graph];
-```
-### Types of Algorithms
-- Simple recursive algorithms
-- Divide and conquer algorrithms
-- Dynamic programming algorithms
-- Greedy algorithms
-- Brute force algorithms
-- Ramdomized algorithms
-\
-&nbsp;
-
-_**Simple recursive algorithms**_:
-
-``` javascript
-Algorithm Sum(A, n)
-    if n = 1
-        return A[0]
-    s = Sum(A, n-1) /* recure on all but last */
-    s p s + A[n-1] /* add last element */
-return s
-```
-\
-&nbsp;
-_**Divide and conquer algorithms:**_
-```
-- Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
-- Combine the solution to the subproblems into a solution to the original problem
-```
-\
-&nbsp;
-_**Dynamic programming algoritms:**_
-```
-- They work based on memoization
-- To find the best solution
-```
-\
-&nbsp;
-_**Greedy algorithms:**_
-```
-- We take the best we can without about future consequence.
-- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
-```
-\
-&nbsp;
-_**Brute force algorithms:**_
-```
-- It simply all possible until a satisfactory solution is found
-```
-\
-&nbsp;
-_**Randomized algorithms:**_
-```
-- Use a random number at least once during the computation to make a decision
-```
-
-### Lecture Notes
-
-[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
-\
-&nbsp;
-### Acknowledgements
-- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
+## When Use/Avoid Recursion?
+- **When to use it?**
+  - when we can easily breakdown a problem into similar subproblem
+  - when we are fine with extra overhead (both time and space) that comes wiht it
+  - When we need a quick working solution instead of efficient one
+  - When traverse a tree
+  - When we use memoization in recursion 
+- **When avoid it?**
+  - If time and space complexity matters for us
+  - Recursion uses more memory. If we use embedded memory. For example an application that takes more memory in the phone is not efficient
+  - Recursion can be slow  
