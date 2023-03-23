@@ -1,96 +1,55 @@
-<!-- Heading -->
-# The Complete Data Structures and Algorithms Course in Python
-
-## What is a Data Structure?
-- Data Structures are different ways of organizing data on your conputer, that can be used effectively
-## What is an Algorithm?
-- Algorithms in Computer Science: Set of rules for a computer prograrm to accomplish a Task
-
-``` mermaid
-flowchart TD
-    A[Input Data]-->B[Calculation];
-
-    B[Calculation]-->C[Stop When answer found]
-```
-
-### What makes a good algrithms?
-- Correctness
-- Efficiency 
-
-### Type of Data Strucures
-
-``` mermaid
-graph TD
-A[Data Structure] --> B[Primitive]
-A[Data Structure] --> C[Non Primitive]
-
-B --> D[Integer \n Float \n Character \n String \n Boolean ];
-C --> E[Linear];
-C --> F[Non Linear];
-E --> G[Static];
-G --> H[Array];
-E --> J[Dynamic];
-J --> K[Linked List \n Stack \n Queue];
-F --> L[Tree \n Graph];
-```
-### Types of Algorithms
-- Simple recursive algorithms
-- Divide and conquer algorrithms
-- Dynamic programming algorithms
-- Greedy algorithms
-- Brute force algorithms
-- Ramdomized algorithms
+## What is Big O?
+- Big O is the language and metric we use to describe the efficiency of algorithms
+  -  Time Complexity: A way of showing how the runtime of a function increases as the size of input increase
+- Types of Runtimes: O(N), O( $N^2$ ), O( $2^N$ )
 \
 &nbsp;
+ ![](https://i0.wp.com/dotnetsimplified.com/wp-content/uploads/2021/10/image-6.png?w=1222&ssl=1)
+\
+&nbsp;
+- **Big O** : It is a complexity that is going to be less or equal to the worst case.
+- **Big - $\Omega$** : It is a complexity that is going to be at least more than the best case
+- **Big - $\Theta$** : It is a complexity that is within bounds of the worst and the best case 
+## Runtime Complexities
+|Complexity|Name|Sample|
+|----------|----|------|
+|O(1)|Constant|A simple and numbers function|
+|O(N)|Linear|Loop through numbers from 1 to n|
+|O(LogN)|Logaithmic|Find an element in sorted array|
+|O($N^2$)|Quadratic|Nested Loops|
+|O($2^N$)|Exponential|Double recursion in Fibonacci|
 
-_**Simple recursive algorithms**_:
-
-``` javascript
-Algorithm Sum(A, n)
-    if n = 1
-        return A[0]
-    s = Sum(A, n-1) /* recure on all but last */
-    s p s + A[n-1] /* add last element */
-return s
-```
-\
-&nbsp;
-_**Divide and conquer algorithms:**_
-```
-- Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
-- Combine the solution to the subproblems into a solution to the original problem
-```
-\
-&nbsp;
-_**Dynamic programming algoritms:**_
-```
-- They work based on memoization
-- To find the best solution
-```
-\
-&nbsp;
-_**Greedy algorithms:**_
-```
-- We take the best we can without about future consequence.
-- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
-```
-\
-&nbsp;
-_**Brute force algorithms:**_
-```
-- It simply all possible until a satisfactory solution is found
-```
-\
-&nbsp;
-_**Randomized algorithms:**_
-```
-- Use a random number at least once during the computation to make a decision
+- **O(1)** : This means that for any given input, the execution will not change. It will remain constatn.
+``` python
+def multiply_numbers(n):
+    return n*n
 ```
 
-### Lecture Notes
 
-[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
-\
-&nbsp;
-### Acknowledgements
-- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
+- **O(n)** : this mean time complexity will grow in direct proportion to the size of input data
+``` python
+def print_items(n):
+  for i in range(n):
+    print(i)
+```
+- **Drop ContantCon** : i in the program haa moe than 1 for loop, the complexity will be O(2n) -> O(N)
+  - It is very possible that O(N) code is faster than O(1) code for specific inputs 
+  - Different computers with different architectures have different constant factors.
+  - Different algorithms with the same basic idea and computational complexity might have slightly different constants
+    ```
+    Example: a*(b-c) vs a*b - a*c
+    ```
+- **O($n^2$)**:
+```python
+def print_items(n): # the complexity here is O(N)
+  for i in range(n): # the complexity here is O(N)
+    for j in range(n):
+      print(i , j)
+```    
+- **O(_logN_)**: to find a number in the array, for example from 1 to 8 you have to find where is 8 stored
+```
+[1][2][3][4][5][6][7][8] divide this array into 2 parts
+[1][2][3] | [5][6][7][8] here, 8 is the second part
+continuous divide the array and find the number 8
+```
+So it is not going to be as flat as O(1), but it is very flat and efficient compared to O(n) and O($n^2$) complexity
