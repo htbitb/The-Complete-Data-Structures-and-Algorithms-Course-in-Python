@@ -53,3 +53,5 @@ def print_items(n): # the complexity here is O(N)
 continuous divide the array and find the number 8
 ```
 So it is not going to be as flat as O(1), but it is very flat and efficient compared to O(n) and O($n^2$) complexity
+
+- **Space Complexity** : is a measure of amount of the working storge that an algorithm needs. That means how much memory in the worst case is needed at any point in the algorithm, as with the time
