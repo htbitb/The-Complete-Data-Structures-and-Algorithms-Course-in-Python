@@ -55,3 +55,30 @@ continuous divide the array and find the number 8
 So it is not going to be as flat as O(1), but it is very flat and efficient compared to O(n) and O($n^2$) complexity
 
 - **Space Complexity** : is a measure of amount of the working storge that an algorithm needs. That means how much memory in the worst case is needed at any point in the algorithm, as with the time
+## Differen terms for input - Add and Multiply
+- **Add the runtime**: _O(A + B)_
+```python
+def print_items(a, b):
+  for i in range a:
+    print(i)
+  for j in range b:
+    print(j)
+```
+if your algorithm is in the form "do this, then when you are all done, do that" when you add the runtime   
+- **Multiply the rumtimes**: _O(A * B)_
+```python
+def print_items(a , b):
+  for i in range a:
+    for j in range b:
+      print(i, j)
+```
+if your algoritm is in form " do this for each time you do that" then you multiply the runtime
+# How to measure the codes using Big O?
+|**No**| **Description**|**Complexity**|
+|----|--------|----------|
+|Rule 1| Any assignment statements and if statement that are executed once regardless of the sixe of the problem|_O(1)_|
+|Rule 2| A simple "for" loop from 0 to n(with no internal loops)| _O(n)_|
+|Rule 3| A nested loop of the same type takes quadratic time complexity|_O($n^2$)_|
+|Rule 4| A loop, in which the controlling parameter is dividec by two at each step| _O(log n)_|
+|Rule 5| When dealing with multiple statements, just add them up | |
+||||
