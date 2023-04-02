@@ -60,3 +60,27 @@ arr1.remove(1)
 |Accessing a given cell|O(1)|O(1)|
 |Searching a given value|O(n)|O(1)|
 |Deleting a given value|O(1)/O(n)|O(1)|
+
+## Time and Space complexity in Two Dimensional Array
+|Operation|Time Complexity| Space Complexity|
+|---|---|---|
+|Creating an empty array|O(1)|O(mn)|
+|Inserting a column/row in an array|O(mn)/O(1)|O(1)|
+|Traversing a given array|O(mn)|O(1)|
+|Accessing a given cell|O(1)|O(1)|
+|Searching a given value|O(mn)|O(1)|
+|Deleting a given value|O(1)/O(mn)|O(1)|
+
+## When to use/avoid Arrays
+**When to use**
+```
+- To store multiple variables of same data type
+- Random access
+```
+\
+&nbsp;
+**When to avoid**
+```
+- Same data type elements
+- Reseve memory
+```
