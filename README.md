@@ -1,96 +1,67 @@
-<!-- Heading -->
-# The Complete Data Structures and Algorithms Course in Python
+# Pytohn Lists
+## What is a List? 
+A list is a data structure that holds an ordered collection of items
+## How to create it?
+```python
+integers = [1, 2, 3, 4]
+string_list = ['Milk', 'Cheese', 'Butter']
+```
+## Time and Space complexity in Python List
 
-## What is a Data Structure?
-- Data Structures are different ways of organizing data on your conputer, that can be used effectively
-## What is an Algorithm?
-- Algorithms in Computer Science: Set of rules for a computer prograrm to accomplish a Task
+|Operation |Time complexity|Space complexity|
+|--|--|--|
+|Creating a list| O(1) | O(n)|
+|InertinInsa value in alist|O(1)/O(n)| O(1)|
+|Traversing a given list|O(n)|O(1)|
+|Accessing a given cell| O(1)|O(1)|
+|Searching a given value|O(n)|O(1)|
+|Deleting a given value|O(1)/O(n)|O(1)|
 
-``` mermaid
-flowchart TD
-    A[Input Data]-->B[Calculation];
+## List Inverview Quetions
 
-    B[Calculation]-->C[Stop When answer found]
+- **Question 1:**
+What will be the ouput of the following code snippet?
+```python 
+def f(value, values):
+    v = 1
+    values[0] = 44
+t = 3
+v = [1, 2, 3]
+f(t, v)
+print(t, v[0])
 ```
-
-### What makes a good algrithms?
-- Correctness
-- Efficiency 
-
-### Type of Data Strucures
-
-``` mermaid
-graph TD
-A[Data Structure] --> B[Primitive]
-A[Data Structure] --> C[Non Primitive]
-
-B --> D[Integer \n Float \n Character \n String \n Boolean ];
-C --> E[Linear];
-C --> F[Non Linear];
-E --> G[Static];
-G --> H[Array];
-E --> J[Dynamic];
-J --> K[Linked List \n Stack \n Queue];
-F --> L[Tree \n Graph];
+- **Question 2:**
+What will be the output if the following code block?
+```python
+data = [[1, 2], [3, 4], [[5, 6], [7, 8]]]
+def fun(m):
+    v = m[0][0]
+    for row in m:
+        for element in row:
+            if v < element: v = element
+    return v
+print(fun(data[0]))
 ```
-### Types of Algorithms
-- Simple recursive algorithms
-- Divide and conquer algorrithms
-- Dynamic programming algorithms
-- Greedy algorithms
-- Brute force algorithms
-- Ramdomized algorithms
-\
-&nbsp;
-
-_**Simple recursive algorithms**_:
-
-``` javascript
-Algorithm Sum(A, n)
-    if n = 1
-        return A[0]
-    s = Sum(A, n-1) /* recure on all but last */
-    s p s + A[n-1] /* add last element */
-return s
+- **Question 3:** What will be the ouput of hte following code block?
+```python 
+a=[1,2,3,4,5,6,7,8,9]
+print(a[::2])
 ```
-\
-&nbsp;
-_**Divide and conquer algorithms:**_
+- **Question 4:** What will be the output of the following code block?
+```python
+fruit_list1 = ['Apple', 'Berry', 'Cherry', 'Papaya']
+fruit_list2 = fruit_list1
+fruit_list3 = fruit_list1[:]
+ 
+fruit_list2[0] = 'Guava'
+fruit_list3[1] = 'Kiwi'
+ 
+sum = 0
+for ls in (fruit_list1, fruit_list2, fruit_list3):
+    if ls[0] == 'Guava':
+        sum += 1
+    if ls[1] == 'Kiwi':
+        sum += 20
+ 
+print(sum)
 ```
-- Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
-- Combine the solution to the subproblems into a solution to the original problem
-```
-\
-&nbsp;
-_**Dynamic programming algoritms:**_
-```
-- They work based on memoization
-- To find the best solution
-```
-\
-&nbsp;
-_**Greedy algorithms:**_
-```
-- We take the best we can without about future consequence.
-- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
-```
-\
-&nbsp;
-_**Brute force algorithms:**_
-```
-- It simply all possible until a satisfactory solution is found
-```
-\
-&nbsp;
-_**Randomized algorithms:**_
-```
-- Use a random number at least once during the computation to make a decision
-```
-
-### Lecture Notes
-
-[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
-\
-&nbsp;
-### Acknowledgements
-- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)

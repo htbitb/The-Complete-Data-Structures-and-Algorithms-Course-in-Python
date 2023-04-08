@@ -36,3 +36,23 @@ while(True):
     average = sum(mylist) / len(mylist)
     
 print('Average:', average)
+
+# Calculate average Temperature
+
+mylist = list()
+
+num_day = int(input("How many day's temperatur?"))
+
+for i in range (1, num_day+1):
+    nextday = int(input("Day" + str(i) + "'s high temp:"))
+    mylist.append(nextday)
+    
+average = sum(mylist) / len(mylist)
+count = 0
+
+for i in range (0, len(mylist)):
+    if mylist[i] > average:
+        count = count + 1
+
+print('Average = ', average)
+print(str(count) + " Day(s) above average")
