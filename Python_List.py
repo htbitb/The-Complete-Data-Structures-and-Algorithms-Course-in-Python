@@ -35,7 +35,7 @@ def SearchingList(List, value):
 
 print(SearchingList(MyList, 5))
 
-# String and Lits
+# String and List
 
 a = 'This course so great!'
 b = list(a)
