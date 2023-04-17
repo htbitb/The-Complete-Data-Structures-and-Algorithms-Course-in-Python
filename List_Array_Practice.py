@@ -76,3 +76,37 @@ def isUnique(list):
             temp.append(i)
     
 print(isUnique(my_list))
+
+# Question 6 - Permutation
+
+def permutation(list1, list2):
+    if len(list1) != len(list2):
+        return False
+    list1.sort()
+    list2.sort()
+    if list1 == list2:
+        return True
+    else:
+        return False
+
+List1 = [1,2,3]
+List2 = [3,2,1]
+print(permutation(List1, List2))
+
+# Question 7 - Rotate Matrix: Given an matrix NxN, write a mrthod to rotate the matrix by 90 degrees
+
+import numpy as np
+
+myArray = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(myArray)
+temp = np.array([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+def rotate_matrix(matrix):
+    n = len(matrix)
+    for i in range(0, n):
+        first = i
+        last = n - i - 1 
+        for j in range (0, n):
+            temp[j][first] = matrix[last][j]
+    print(temp)
+    
+rotate_matrix(myArray)
