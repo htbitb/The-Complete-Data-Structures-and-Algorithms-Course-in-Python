@@ -1,96 +1,56 @@
-<!-- Heading -->
-# The Complete Data Structures and Algorithms Course in Python
+# Dictionaries
 
-## What is a Data Structure?
-- Data Structures are different ways of organizing data on your conputer, that can be used effectively
-## What is an Algorithm?
-- Algorithms in Computer Science: Set of rules for a computer prograrm to accomplish a Task
+## What is Dictionaries?
+- A dictionary is a collection which is unordered, changeable and indexed.
 
-``` mermaid
-flowchart TD
-    A[Input Data]-->B[Calculation];
+## How to create a Dictionary?
+```python
+myDict = dict()
+print(myDict)
+```
+```python
+engtoSp = {"one": "uno", "two": "dos", "three": "tres"}
+print(engtoSp)
+```
+## Dictionary in Memory
+A **hash table** is a way of doing **key-value lookups**. You store the values in an array, and then use a **hash function** to find the index of the array ceel that correspond to your key-value pair.
 
-    B[Calculation]-->C[Stop When answer found]
-```
+![dictionary](D:\Data_Structure_And_Algothim\Python\The-Complete-Data-Structures-and-Algorithms-Course-in-Python\dictionary_hash.png)
 
-### What makes a good algrithms?
-- Correctness
-- Efficiency 
+## Inert/ Update an element in a Dictionary
+```python
+myDict = {'name': 'Edy', 'age': 26}
+myDict['address'] = 'London'
+print(myDict)
+```
+```
+output:
+{'name': 'Edy', 'age': 26, 'address': 'London'}
+```
+## Traversing through a dictionary
+```python 
+myDict = {'name': 'Edy', 'age': 26, 'address': 'London'}
 
-### Type of Data Strucures
+def traverseDict(dict):
+    for key in dict:
+        print(key, dict[key])
+traverseDict(myDict)
+```
+```
+output:
+name Edy
+age 26
+address London
+```
+## Search for an element in a Dictionary
+```python
+myDict = {'name': 'Edy', 'age': 26, 'address': 'London'}
 
-``` mermaid
-graph TD
-A[Data Structure] --> B[Primitive]
-A[Data Structure] --> C[Non Primitive]
+def searchDict(dict, value):
+    for key in dict:
+        if dict[key] == value:
+            return key, value
+    return 'the value does not exist'
 
-B --> D[Integer \n Float \n Character \n String \n Boolean ];
-C --> E[Linear];
-C --> F[Non Linear];
-E --> G[Static];
-G --> H[Array];
-E --> J[Dynamic];
-J --> K[Linked List \n Stack \n Queue];
-F --> L[Tree \n Graph];
+print(searchDict(myDict, 27))
 ```
-### Types of Algorithms
-- Simple recursive algorithms
-- Divide and conquer algorrithms
-- Dynamic programming algorithms
-- Greedy algorithms
-- Brute force algorithms
-- Ramdomized algorithms
-\
-&nbsp;
-
-_**Simple recursive algorithms**_:
-
-``` javascript
-Algorithm Sum(A, n)
-    if n = 1
-        return A[0]
-    s = Sum(A, n-1) /* recure on all but last */
-    s p s + A[n-1] /* add last element */
-return s
-```
-\
-&nbsp;
-_**Divide and conquer algorithms:**_
-```
-- Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
-- Combine the solution to the subproblems into a solution to the original problem
-```
-\
-&nbsp;
-_**Dynamic programming algoritms:**_
-```
-- They work based on memoization
-- To find the best solution
-```
-\
-&nbsp;
-_**Greedy algorithms:**_
-```
-- We take the best we can without about future consequence.
-- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
-```
-\
-&nbsp;
-_**Brute force algorithms:**_
-```
-- It simply all possible until a satisfactory solution is found
-```
-\
-&nbsp;
-_**Randomized algorithms:**_
-```
-- Use a random number at least once during the computation to make a decision
-```
-
-### Lecture Notes
-
-[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
-\
-&nbsp;
-### Acknowledgements
-- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
