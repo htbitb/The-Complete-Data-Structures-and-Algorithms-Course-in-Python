@@ -15,7 +15,9 @@ print(engtoSp)
 ## Dictionary in Memory
 A **hash table** is a way of doing **key-value lookups**. You store the values in an array, and then use a **hash function** to find the index of the array ceel that correspond to your key-value pair.
 
-![dictionary](D:\Data_Structure_And_Algothim\Python\The-Complete-Data-Structures-and-Algorithms-Course-in-Python\dictionary_hash.png)
+<p align="center">
+    <img src="dictionary_hash.png" width="80%" height="50%" title="hash" >
+</p>
 
 ## Inert/ Update an element in a Dictionary
 ```python
