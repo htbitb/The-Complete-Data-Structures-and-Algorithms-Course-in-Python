@@ -56,3 +56,14 @@ def searchDict(dict, value):
 
 print(searchDict(myDict, 27))
 ```
+## Delete/ Remove an element from a Dictionary
+1. Using pop()
+```python
+myDict = {'name': 'Edy', 'age': 26, 'address': 'London', 'Education': 'master'}
+myDict.pop('name')
+```
+```
+output: 
+{'age': 26, 'address': 'London', 'Education': 'master'}
+```
+
