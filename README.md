@@ -57,13 +57,35 @@ def searchDict(dict, value):
 print(searchDict(myDict, 27))
 ```
 ## Delete/ Remove an element from a Dictionary
-1. Using pop()
+1. **_Using pop()_**
 ```python
 myDict = {'name': 'Edy', 'age': 26, 'address': 'London', 'Education': 'master'}
 myDict.pop('name')
+print(myDict)
 ```
 ```
 output: 
 {'age': 26, 'address': 'London', 'Education': 'master'}
 ```
-
+2. **_Using popitem()_**
+```python
+myDict = {'name': 'Edy', 'age': 26, 'address': 'London', 'Education': 'master'}
+print(myDict.popitem())
+```
+```
+output: 
+{'name': 'Edy', 'age': 26, 'address': 'London'}
+```
+## Dictionary Methods
+```
+1. Clear( ) -  Syntax: Dictionary.clear()
+2. Copy( ) - Syntax: dictionary.copy()
+3. Fromkeys( ) - Syntax: dictionary.fromkey(sequence[ ], value)
+4. get( ) - Syntax: dictionary.get(key, value)
+5. items( ) - Syntax: dictionary.items()
+6. keys( ) - Syntax: dictionary.keys()
+7. setdefault( ) -  Syntax: dictionary.setdefault(key, default_value)
+8. value( ) - Syntax: dictionary.values()
+9. update( ) - dictionary.update(other_dictionary)
+```
+- [Click here to see the operation of all the method](https://github.com/htbitb/The-Complete-Data-Structures-and-Algorithms-Course-in-Python/tree/Dictionary/Dictionary_Method.py)
