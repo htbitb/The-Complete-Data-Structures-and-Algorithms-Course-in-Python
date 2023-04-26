@@ -77,15 +77,15 @@ output:
 {'name': 'Edy', 'age': 26, 'address': 'London'}
 ```
 ## Dictionary Methods
-```
-1. Clear( ) -  Syntax: Dictionary.clear()
-2. Copy( ) - Syntax: dictionary.copy()
-3. Fromkeys( ) - Syntax: dictionary.fromkey(sequence[ ], value)
-4. get( ) - Syntax: dictionary.get(key, value)
-5. items( ) - Syntax: dictionary.items()
-6. keys( ) - Syntax: dictionary.keys()
-7. setdefault( ) -  Syntax: dictionary.setdefault(key, default_value)
-8. value( ) - Syntax: dictionary.values()
-9. update( ) - dictionary.update(other_dictionary)
-```
+|No.| Method | Syntax |
+|:------:|:-------:|:-------------:|
+|1 | Clear( )     |     Dictionary.clear()|
+|2 | Copy( )      |    dictionary.copy()|
+|3 | Fromkeys( )  |    dictionary.fromkey(sequence[ ], value)|
+|4 | get( )       |    dictionary.get(key, value)|
+|5 | items( )     |    dictionary.items()|
+|6 | keys( )      |    dictionary.keys()|
+|7 | setdefault( )|  dictionary.setdefault(key, default_value)|
+|8 | value( )     | dictionary.values()|
+|9 | update( )    |dictionary.update(other_dictionary) ||
 - [Click here to see the operation of all the method](https://github.com/htbitb/The-Complete-Data-Structures-and-Algorithms-Course-in-Python/tree/Dictionary/Dictionary_Method.py)
