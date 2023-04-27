@@ -89,3 +89,23 @@ output:
 |8 | value( )     | dictionary.values()|
 |9 | update( )    |dictionary.update(other_dictionary) ||
 - [Click here to see the operation of all the method](https://github.com/htbitb/The-Complete-Data-Structures-and-Algorithms-Course-in-Python/tree/Dictionary/Dictionary_Method.py)
+
+## Dictioanry vs List
+
+|Dictionary| List|
+|:----:|:------:|
+|Unordered | Ordered|
+|Access via Keys| Access via index
+|Collection of key value pairs | Collection of elements
+|Preferred when you have unique key values| Preferred when you have ordered data|
+|No duplicate members| Allow duplicate members|
+
+## Time and Space complexity of a Dictionary
+|Operation|Time complexity|Space complexity|
+|:------|:----:|:----:|
+|Creating a Dictionary| O(len(dict)) | O(n)|
+|Inserting a value in a Dictionary| O(1)/O(n)|O(1)|
+|Traversing a given Dictionary| O(n) | O(1)|
+|Accessing a given cell | O(1) | O(1)|
+|Searching a given value| O(n) | O(1)|
+|Deleting a given value | O(1) | O(1)|
