@@ -1,96 +1,68 @@
-<!-- Heading -->
-# The Complete Data Structures and Algorithms Course in Python
+# Tuples
+- [Tuples](#tuples)
+  - [What is a Tuple?](#what-is-a-tuple)
+  - [Tuples in Memory](#tuples-in-memory)
+  - [How to traverse through Tuple](#how-to-traverse-through-tuple)
+  - [Search for an element in Tuple](#search-for-an-element-in-tuple)
+  - [Tuple vs Lists](#tuple-vs-lists)
+  - [Time and Space Complexity in Python](#time-and-space-complexity-in-python)
 
-## What is a Data Structure?
-- Data Structures are different ways of organizing data on your conputer, that can be used effectively
-## What is an Algorithm?
-- Algorithms in Computer Science: Set of rules for a computer prograrm to accomplish a Task
+## What is a Tuple?
+- Tuble is an immutable sequence of python object
+- Tuple are also comparable and hastable
 
-``` mermaid
-flowchart TD
-    A[Input Data]-->B[Calculation];
+```python
+newTuple = 'a', 'b', 'c', 'd', 'e'
+print(newTuple)
+```
+```
+output: ('a', 'b', 'c', 'd', 'e')
+```
+- when create a new Tuple you should remember the 'comma'
+  
+## Tuples in Memory
+**Sample Tuple**
 
-    B[Calculation]-->C[Stop When answer found]
-```
+![Memory](memory.png)
 
-### What makes a good algrithms?
-- Correctness
-- Efficiency 
 
-### Type of Data Strucures
+**Memory**
 
-``` mermaid
-graph TD
-A[Data Structure] --> B[Primitive]
-A[Data Structure] --> C[Non Primitive]
+![local](sample.png)
+## How to traverse through Tuple
 
-B --> D[Integer \n Float \n Character \n String \n Boolean ];
-C --> E[Linear];
-C --> F[Non Linear];
-E --> G[Static];
-G --> H[Array];
-E --> J[Dynamic];
-J --> K[Linked List \n Stack \n Queue];
-F --> L[Tree \n Graph];
-```
-### Types of Algorithms
-- Simple recursive algorithms
-- Divide and conquer algorrithms
-- Dynamic programming algorithms
-- Greedy algorithms
-- Brute force algorithms
-- Ramdomized algorithms
-\
-&nbsp;
+```python
+newTuple = ('a', 'b', 'c', 'd', 'e')
 
-_**Simple recursive algorithms**_:
-
-``` javascript
-Algorithm Sum(A, n)
-    if n = 1
-        return A[0]
-    s = Sum(A, n-1) /* recure on all but last */
-    s p s + A[n-1] /* add last element */
-return s
+for i in range(len(newTuple)):
+    print(newTuple[i])
 ```
-\
-&nbsp;
-_**Divide and conquer algorithms:**_
 ```
-- Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively
-- Combine the solution to the subproblems into a solution to the original problem
-```
-\
-&nbsp;
-_**Dynamic programming algoritms:**_
-```
-- They work based on memoization
-- To find the best solution
-```
-\
-&nbsp;
-_**Greedy algorithms:**_
-```
-- We take the best we can without about future consequence.
-- We hope that by chosing a local optimum solution at each step, we will end up at a global optimum solution
-```
-\
-&nbsp;
-_**Brute force algorithms:**_
-```
-- It simply all possible until a satisfactory solution is found
-```
-\
-&nbsp;
-_**Randomized algorithms:**_
-```
-- Use a random number at least once during the computation to make a decision
+output:
+a
+b
+c
+d
+e
 ```
 
-### Lecture Notes
+## Search for an element in Tuple
+```python
+newTuple = ('a', 'b', 'c', 'd', 'e')
 
-[Click here to get the document about Data Structure and Algorithms in Python](https://docdro.id/JQpxdhI)
-\
-&nbsp;
-### Acknowledgements
-- [UDEMY](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
+print(newTuple.index('c'))
+```
+
+## Tuple vs Lists
+Tuple like a constanst can not be modified. List is flexible and can be modified
+- We generally use tuplesfor heterogeneous (different) data types and list for homogeneous (similar) data types
+- Iterating through a tuple is faster than with list
+- Tuples that contain immutable elements can be used as a key for a dictionary.
+- If you have data that doesn't change, implementing it as tuple will guarantee that it remain write-protected.
+## Time and Space Complexity in Python 
+|Operation| Time Complexity| Space complexity|
+|----|:------:|:-------:|
+|Creating a Tuple| O(1) | O(n)|
+|Traversing a given Tuple| O(n) | O(1)|
+|Accessing a given element| O(1)| O(1)|
+|Searching a given element| O(n) | O(1)|
